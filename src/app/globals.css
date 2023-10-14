@@ -8,20 +8,24 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.shadow-large{
+  box-shadow: 0rem 0rem 1.2rem rgba(18,18,18,0.8);
+}
+.shadow-medium{
+  box-shadow: 0rem 0rem 0.6rem rgba(18,18,18,0.6);
+}
+.shadow-small{
+  box-shadow: 0rem 0rem 0.4rem rgba(18,18,18,0.6);
+}
+.flex-col-center{
+  @apply flex flex-col justify-center items-center text-center
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.card-width {
+  width: 40vw; 
+
+  @media(max-width: 1024px) {
+    width: 90%; 
+    height: auto;
+  }
 }
