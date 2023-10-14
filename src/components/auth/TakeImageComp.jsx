@@ -111,7 +111,7 @@ const TakeImageComp = (props) => {
           {images.map((image, index) => (
             <div className='flex flex-col justify-center items-center '>
                 <img className='w-32' key={index} src={image.imageLink} alt={`Captured Image ${index}`} />
-                <p>score: {image.score.toFixed(2)}</p>
+                <p key={index+image.length}>score: {image.score.toFixed(2)}</p>
             </div>
           ))}
         </div>
