@@ -109,7 +109,7 @@ const TakeImageComp = (props) => {
         </div>
         <div className='flex flex-wrap gap-4 items-center justify-center'>
           {images.map((image, index) => (
-            <div className='flex flex-col justify-center items-center '>
+            <div key={index+image.length*2} className='flex flex-col justify-center items-center '>
                 <img className='w-32' key={index} src={image.imageLink} alt={`Captured Image ${index}`} />
                 <p key={index+image.length}>score: {image.score.toFixed(2)}</p>
             </div>
